@@ -1,0 +1,133 @@
+.container {
+    display: grid;
+    place-items: center;
+    background-color: var(--background-color);
+}
+
+.component {
+    max-width: 40em;
+    height: 30em;
+    display: flex;
+    align-items: center;
+}
+
+.component__image {
+    width: 50%;
+    object-fit: contain;
+    border-radius: .6em 0 0 .6em;
+}
+
+.component__image--mobile {
+    display: none;
+}
+
+.component__card {
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+    padding-bottom: 0;
+    border-radius: 0 .6em .6em 0;
+    background-color: var(--white);
+}
+
+.component__card__header__name-type-product {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    color: var(--dark-gray);
+    margin-bottom: 2em;
+}
+
+.component__card__header__name-product {
+    font-size: 2.2em;
+    line-height: 1em;
+    overflow-wrap: break-word;
+    color: var(--dark-grayish-blue);
+    font-family: var(--font-family-fraunces);
+    margin-bottom: .6em;
+}
+
+.component__card__body__description {
+    color: var(--dark-gray);
+    line-height: 1.6em;
+    font-size: .93em;
+    margin-bottom: 1em;
+}
+
+.component__card__body__value-container {
+    display: flex;
+    align-items: center;
+    gap: 0 1em;
+}
+
+.component__card__body__value-container__value {
+    font-size: 2em;
+    color: var(--dark-cyan);
+    font-family: var(--font-family-fraunces);
+}
+
+.component__card__body__value-container__discount {
+    font-size: .81em;
+    color: var(--dark-gray);
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.component__card__body__add-card-button {
+    display: inline-block;
+    width: 100%;
+    height: 3.5em;
+    font-size: .9em;
+    font-weight: 700;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    text-align: center;
+    border-radius: .6em;
+    margin: 2em auto;
+    cursor: pointer;
+}
+
+.component__card__body__add-card-button:hover {
+    background-color: var(--dark-grayish-blue);
+}
+
+.component__card__body__add-card-button__icon {
+    margin-right: .5em;
+}
+
+@media (max-width: 675px) {
+    .component {
+        max-width: 100%;
+        height: auto;
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .component__image {
+        width: 100%;
+        border-radius: 0.6em 0.6em 0 0;
+    }
+
+    .component__image--desktop {
+        display: none;
+    }
+
+    .component__image--mobile {
+        display: initial;
+    }
+
+    .component__card {
+        width: 100%;
+        height: 50%;
+        padding: 2em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        border-radius: 0 0 0.6em 0.6em;
+    }
+
+    .component__card__body__add-card-button {
+        margin: 1em auto;
+    }
+
+}
